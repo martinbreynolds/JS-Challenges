@@ -25,3 +25,16 @@ function ageCalculator(currentyear, yearOfBirth) {
 // geographic location
 // job title
 // Output your fortune to the screen like so: “You will be a X in Y, and married to Z with N kids.”
+
+function fortuneTeller(numberOfChildren, partnersName, location, jobTitle) {
+  var numberOfChildren;
+  var partnersName;
+  var location;
+  var jobTitle;
+
+  var response = `You will be a ${jobTitle} in ${location}, and married to ${partnersName} with ${numberOfChildren} kids.`;
+
+  return console.log(response);
+}
+
+fortuneTeller(5, "Toni", "New York", "Fireman");
