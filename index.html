@@ -21,11 +21,18 @@
       <h3>The Code</h3>
 
       <pre class="bg-dark text-white p-5"><code>
-// Write a function that outputs a sentence. Then invoke that function later in your code.
+// Write a simple program to combine a first name and a last name inside a function.
+// Then update the function to accept a first and last name as arguments.
 
-function Sentence() {
-  var newSentence = "Even the darkest night will end and the sun will rise.";
-  document.getElementById("sentence").innerHTML = newSentence;
+// Add a return statement to your 'name' function. Use that function to set the value of a variable.
+
+function displayFullName(fName, lName) {
+  var fName = document.getElementById("fName").value;
+  var lName = document.getElementById("lName").value;
+
+  return (document.getElementById(
+    "fullNameDisplay"
+  ).innerHTML = `${fName} ${lName}`);
 }
       </code></pre>
 
@@ -36,6 +43,39 @@ function Sentence() {
         Create a Sentence.
       </button>
       <p id="sentence">&nbsp;</p>
+
+      <h2>Show your Full Name</h2>
+
+      <h3>The Code</h3>
+
+      <pre class="bg-dark text-white p-5"><code>
+// Write a simple program to combine a first name and a last name inside a function.
+// Then update the function to accept a first and last name as arguments.
+
+function displayFullName(fName, lName) {
+  var fName = document.getElementById("fName").value;
+  var lName = document.getElementById("lName").value;
+
+  return (document.getElementById(
+    "fullNameDisplay"
+  ).innerHTML = `${fName} ${lName}`);
+}
+      </code></pre>
+
+      <h3>The Code in Action</h3>
+
+      <label for="fName">Please enter your first name.</label>
+      <input type="text" id="fName" />
+
+      <label for="lName">Please enter your last name.</label>
+      <input type="text" id="lName" />
+
+      <label>Please click the button to display a sentence.</label>
+      <button type="submit" onclick="displayFullName()">
+        Display your full name.
+      </button>
+
+      <p id="fullNameDisplay">&nbsp;</p>
 
       <h2>Age Calculator</h2>
 
