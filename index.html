@@ -14,8 +14,28 @@
 
     <label>Please enter your current Age</label>
 
-    <input maxlength="3" type="number" id="currentAge" />
+    <input type="number" id="currentAge" />
     <button type="submit" onclick="ageCalculator()">Calculate your Age</button>
     <p id="year"></p>
+
+    <h2>Fortune Teller</h2>
+    <form name="fortuneTeller">
+      <label for="fortuneAge">Please enter your current Age</label>
+      <input type="number" id="fortuneAge" />
+
+      <label for="partnersName">Please enter your partners Name</label>
+      <input type="text" id="partnersName" />
+
+      <label for="location">Please enter your current location</label>
+      <input type="text" id="location" />
+
+      <label for="jobTitle">Please enter your job title</label>
+      <input type="text" id="jobTitle" />
+      <button type="submit" onclick="fortuneTeller()">
+        Let me tell your fortune
+      </button>
+    </form>
+
+    <p id="yourFortune"></p>
   </body>
 </html>
