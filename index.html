@@ -21,12 +21,22 @@
       <h3>The Code</h3>
 
       <pre><code>
-        function ageCalculator(currentyear, yearOfBirth) {
+        // The Age Calculator
+
+// Forgot how old someone is? Calculate it!
+
+// Store the current year in a variable.
+// Store their birth year in a variable.
+// Calculate their 2 possible ages based on the stored values.
+// Output them to the screen like so: “They are either NN or NN”, substituting the values.
+
+function ageCalculator(currentyear, yearOfBirth) {
   var currentyear = new Date().getFullYear();
   var yearOfBirth = parseInt(document.getElementById("currentAge").value);
   var age = currentyear - yearOfBirth;
   return (document.getElementById("year").innerHTML =
     "You are either " + (age - 1) + " or " + age + ".");
+}
 }
         </code></pre>
 
@@ -41,6 +51,36 @@
       <p id="year">&nbsp;</p>
 
       <h2>Fortune Teller</h2>
+
+      <h3>The Code</h3>
+
+      <pre><code>
+// The Fortune Teller
+// Why pay a fortune teller when you can just program your fortune yourself?
+
+// Store the following into variables:
+
+// number of children
+// partner’s name
+// geographic location
+// job title
+// Output your fortune to the screen like so: “You will be a X in Y, and married to Z with N kids.”
+
+function fortuneTeller(numberOfChildren, partnersName, location, jobTitle) {
+  var numberOfChildren = document.getElementById("fortuneAge").value;
+  var partnersName = document.getElementById("partnersName").value;
+  var location = document.getElementById("location").value;
+  var jobTitle = document.getElementById("jobTitle").value;
+
+  return (document.getElementById(
+    "yourFortune"
+  ).innerHTML = `You will be a ${jobTitle} in ${location}, and married to ${partnersName} with ${numberOfChildren} kids.`);
+}
+
+
+      </code></pre>
+
+      <h3>The Code in Action</h3>
 
       <label for="fortuneAge">Please enter your current Age</label>
       <input type="number" id="fortuneAge" />
@@ -57,7 +97,7 @@
         Let me tell your fortune
       </button>
 
-      <p id="yourFortune"></p>
+      <p id="yourFortune">&nbsp;</p>
       <!-- Scripts -->
       <script src="scripts/scripts.js"></script>
       <script
