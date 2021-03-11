@@ -27,14 +27,12 @@ function ageCalculator(currentyear, yearOfBirth) {
 // Output your fortune to the screen like so: “You will be a X in Y, and married to Z with N kids.”
 
 function fortuneTeller(numberOfChildren, partnersName, location, jobTitle) {
-  var numberOfChildren;
-  var partnersName;
-  var location;
-  var jobTitle;
+  var numberOfChildren = document.getElementById("fortuneAge").value;
+  var partnersName = document.getElementById("partnersName").value;
+  var location = document.getElementById("location").value;
+  var jobTitle = document.getElementById("jobTitle").value;
 
-  var response = `You will be a ${jobTitle} in ${location}, and married to ${partnersName} with ${numberOfChildren} kids.`;
-
-  return console.log(response);
+  return (document.getElementById(
+    "yourFortune"
+  ).innerHTML = `You will be a ${jobTitle} in ${location}, and married to ${partnersName} with ${numberOfChildren} kids.`);
 }
-
-fortuneTeller(5, "Toni", "New York", "Fireman");
