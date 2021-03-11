@@ -16,6 +16,27 @@
     <div class="container">
       <h1>Javascript Challenges - Variables and Operators</h1>
 
+      <h2>Sentence Output</h2>
+
+      <h3>The Code</h3>
+
+      <pre class="bg-dark text-white p-5"><code>
+// Write a function that outputs a sentence. Then invoke that function later in your code.
+
+function Sentence() {
+  var newSentence = "Even the darkest night will end and the sun will rise.";
+  document.getElementById("sentence").innerHTML = newSentence;
+}
+      </code></pre>
+
+      <h3>The Code in Action</h3>
+
+      <label>Please click the button to display a sentence.</label>
+      <button type="submit" onclick="createSentence()">
+        Create a Sentence.
+      </button>
+      <p id="sentence">&nbsp;</p>
+
       <h2>Age Calculator</h2>
 
       <h3>The Code</h3>

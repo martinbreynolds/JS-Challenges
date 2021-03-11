@@ -1,3 +1,10 @@
+// Write a function that outputs a sentence. Then invoke that function later in your code.
+
+function createSentence() {
+  var newSentence = "Even the darkest night will end and the sun will rise.";
+  document.getElementById("sentence").innerHTML = newSentence;
+}
+
 // The Age Calculator
 
 // Forgot how old someone is? Calculate it!
