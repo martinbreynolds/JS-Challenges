@@ -12,6 +12,20 @@
 
     <h2>Age Calculator</h2>
 
+    <h3>The Code</h3>
+
+    <pre><code>
+        function ageCalculator(currentyear, yearOfBirth) {
+  var currentyear = new Date().getFullYear();
+  var yearOfBirth = parseInt(document.getElementById("currentAge").value);
+  var age = currentyear - yearOfBirth;
+  return (document.getElementById("year").innerHTML =
+    "You are either " + (age - 1) + " or " + age + ".");
+}
+        </code></pre>
+
+    <h3>The Code in Action</h3>
+
     <label>Please enter your current Age</label>
 
     <input maxlength="3" type="number" id="currentAge" />
