@@ -77,12 +77,16 @@ function displayFullName(fName, lName) {
 
       <p id="fullNameDisplay">&nbsp;</p>
 
-      <h2>Do I need a coat?</h2>
+      <h2>Do I need a coat? - Part 1</h2>
 
       <h3>The Code</h3>
 
       <pre class="bg-dark text-white p-5"><code>
-// Make a variable called temperature. Write some code that tells you to put on a coat if it is below 50 degrees.
+//Should I wear a coat?
+
+// Part 1
+// Make a variable called temperature. Write some code that tells you to put on a coat if it is 
+below 50 degrees.
 
 function coatCheck() {
   var temperature;
@@ -108,6 +112,49 @@ function coatCheck() {
       <button type="submit" onclick="coatCheck()">Do I need a coat?</button>
 
       <p id="coatAdvice">&nbsp;</p>
+
+      <h2>Do I need a coat? - Part 2</h2>
+
+      <h3>The Code</h3>
+
+      <pre class="bg-dark text-white p-5"><code>
+//Should I wear a coat?
+
+// Part 2
+//  If it's less than 50 degrees, wear a coat.
+// If it's less than 30 degrees, wear a coat and a  hat.
+// If it's less than 0 degrees, stay inside.
+// Otherwise, just pants and vest is fine.
+
+function coatCheck2() {
+  var temperature2;
+  var coatWeather2;
+
+  temperature2 = document.getElementById("temperature2").value;
+  if (temperature2 == "") {
+    return;
+  }
+
+  temp2 = parseInt(temperature);
+
+  if (temp >= 50) coatWeather2 = "Pants and Vest are fine";
+  else if (temp >= 30) coatWeather2 = "Wear a Coat";
+  else if (temp >= 0) coatWeather2 = "Wear a Coat and a Hat";
+  else coatWeather2 = "Stay Inside";
+
+  document.getElementById("coatAdvice2").innerHTML = coatWeather2;
+}
+      </code></pre>
+
+      <h3>The Code in Action</h3>
+
+      <label for="temperature2">Whats the temperature?</label>
+      <input type="text" id="temperature2" />
+
+      <label>Please click the button to check if you need a coat.</label>
+      <button type="submit" onclick="coatCheck2()">Do I need a coat?</button>
+
+      <p id="coatAdvice2">&nbsp;</p>
 
       <h2>Age Calculator</h2>
 
