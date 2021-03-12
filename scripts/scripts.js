@@ -1,5 +1,10 @@
+//Should I wear a coat?
+
+// Part 1
 // Make a variable called temperature. Write some code that tells you to put on a coat if it is below 50 degrees.
 
+// Part 2
+//  If it's less than 50 degrees, wear a coat. If it's less than 30 degrees, wear a coat and a  hat. If it's less than 0 degrees, stay inside. Otherwise, just pants and vest is fine.
 function coatCheck() {
   var temperature;
   var coatWeather;
@@ -13,6 +18,8 @@ function coatCheck() {
   coatWeather = temp < 50 ? "Put on your coat!" : "No coat required!";
   document.getElementById("coatAdvice").innerHTML = coatWeather;
 }
+
+//Full Name Display
 
 // Write a simple program to combine a first name and a last name inside a function.
 // Then update the function to accept a first and last name as arguments.
