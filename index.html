@@ -238,6 +238,42 @@ function fortuneTeller(numberOfChildren, partnersName, location, jobTitle) {
       </button>
 
       <p id="yourFortune">&nbsp;</p>
+
+      <h2>Percentage Calculator</h2>
+
+      <h3>The Code</h3>
+
+      <pre class="bg-dark text-white p-5"><code>
+//Percentage Calculator
+
+//Create a percentage calculator that takes a number and % and return the percentage value.
+
+function percentageCalculator(num, per) {
+  var num = parseInt(
+    document.getElementById("percentageCalculatorNumber").value
+  );
+  var per = parseInt(
+    document.getElementById("percentageCalculatorPercent").value
+  );
+  return (document.getElementById("percentageResult").innerHTML =
+    (num / 100) * per);
+}
+      </code></pre>
+
+      <h3>The Code in Action</h3>
+
+      <label for="percentageCalculatorNumber">Please enter a umbere</label>
+      <input type="number" id="percentageCalculatorNumber" />
+
+      <label for="percentageCalculatorPercent">Please enter a %</label>
+      <input type="number" id="percentageCalculatorPercent" />
+
+      <button type="submit" onclick="percentageCalculator()">
+        Work out the Percentage
+      </button>
+
+      <p id="percentageResult">&nbsp;</p>
+
       <!-- Scripts -->
       <script src="scripts/scripts.js"></script>
       <script
