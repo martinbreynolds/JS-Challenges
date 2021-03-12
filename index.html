@@ -77,6 +77,38 @@ function displayFullName(fName, lName) {
 
       <p id="fullNameDisplay">&nbsp;</p>
 
+      <h2>Do I need a coat?</h2>
+
+      <h3>The Code</h3>
+
+      <pre class="bg-dark text-white p-5"><code>
+// Make a variable called temperature. Write some code that tells you to put on a coat if it is below 50 degrees.
+
+function coatCheck() {
+  var temperature;
+  var coatWeather;
+
+  temperature = document.getElementById("temperature").value;
+  if (temperature == "") {
+    return;
+  }
+
+  temp = parseInt(temperature);
+  coatWeather = temp < 50 ? "Put on your coat!" : "No coat required!";
+  document.getElementById("coatAdvice").innerHTML = coatWeather;
+}
+      </code></pre>
+
+      <h3>The Code in Action</h3>
+
+      <label for="temperature">Whats the temperature?</label>
+      <input type="text" id="temperature" />
+
+      <label>Please click the button to check if you need a coat.</label>
+      <button type="submit" onclick="coatCheck()">Do I need a coat?</button>
+
+      <p id="coatAdvice">&nbsp;</p>
+
       <h2>Age Calculator</h2>
 
       <h3>The Code</h3>

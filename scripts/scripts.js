@@ -1,3 +1,19 @@
+// Make a variable called temperature. Write some code that tells you to put on a coat if it is below 50 degrees.
+
+function coatCheck() {
+  var temperature;
+  var coatWeather;
+
+  temperature = document.getElementById("temperature").value;
+  if (temperature == "") {
+    return;
+  }
+
+  temp = parseInt(temperature);
+  coatWeather = temp < 50 ? "Put on your coat!" : "No coat required!";
+  document.getElementById("coatAdvice").innerHTML = coatWeather;
+}
+
 // Write a simple program to combine a first name and a last name inside a function.
 // Then update the function to accept a first and last name as arguments.
 
