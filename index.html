@@ -4,28 +4,136 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" src="scripts/styles.css" />
+    <link rel="stylesheet" href="/stylesheet.css" />
     <title>Variables and Operators</title>
   </head>
+
+  <!-- Start of Body Content -->
   <body>
-    <div class="container">
-      <h1>Javascript Challenges - Variables and Operators</h1>
+    <div class="row">
+      <sidebar class="col-12 col-md-3 col-xl-2 bg-light">
+        <nav class="p-3">
+          <h3>Variables and Operators</h3>
+          <h4>Tasks</h4>
+          <ul>
+            <li><a href="#sentenceChallenge">Sentence</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 1</a></li>
+          </ul>
+        </nav>
+      </sidebar>
+      <!-- Header -->
+      <header>
+        <div class="container header-wrap">
+          <h1>Javascript Challenges</h1>
+          <h2>Variables and Operators</h2>
+        </div>
+      </header>
 
-      <h2>Sentence Output</h2>
+      <!-- Main Content -->
+      <main class="col-12 col-md-9 col-xl-10 pt-2">
+        <div class="container">
+          <a id="#top"></a>
+          <br />
 
-      <h3>The Code</h3>
+          <div class="challenge">
+            <h2 id="sentenceChallenge">Sentence Output</h2>
+            <p>
+              Write a simple program to combine a first name and a last name
+              inside a function. Then update the function to accept a first and
+              last name as arguments. Add a return statement to your 'name'
+              function. Use that function to set the value of a variable.
+            </p>
+            <h3>The Code</h3>
 
-      <pre class="bg-dark text-white p-5"><code>
+            <pre class="bg-dark text-white"><code>
+function displayFullName(fName, lName) {
+  var fName = document.getElementById("fName").value;
+  var lName = document.getElementById("lName").value;
+
+  return (document.getElementById(
+    "fullNameDisplay"
+  ).innerHTML = `${fName} ${lName}`);
+}
+      </code></pre>
+
+            <h3>The Code in Action</h3>
+            <div class="codeInAction">
+              <div class="buttonHolder">
+                <label>Please click the button to display a sentence.</label>
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  onclick="createSentence()"
+                >
+                  Create a Sentence.
+                </button>
+              </div>
+              <div class="answerHolder">
+                <p id="sentence">&nbsp;</p>
+              </div>
+            </div>
+            <a href="#top">Back to the top</a>
+          </div>
+
+          <!-- Full Name Challenge -->
+          <h2>Show your Full Name</h2>
+
+          <h3>The Code</h3>
+
+          <pre class="bg-dark text-white p-5"><code>
 // Write a simple program to combine a first name and a last name inside a function.
 // Then update the function to accept a first and last name as arguments.
-
-// Add a return statement to your 'name' function. Use that function to set the value of a variable.
 
 function displayFullName(fName, lName) {
   var fName = document.getElementById("fName").value;
@@ -37,52 +145,27 @@ function displayFullName(fName, lName) {
 }
       </code></pre>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code in Action</h3>
 
-      <label>Please click the button to display a sentence.</label>
-      <button type="submit" onclick="createSentence()">
-        Create a Sentence.
-      </button>
-      <p id="sentence">&nbsp;</p>
+          <label for="fName">Please enter your first name.</label>
+          <input type="text" id="fName" />
 
-      <h2>Show your Full Name</h2>
+          <label for="lName">Please enter your last name.</label>
+          <input type="text" id="lName" />
 
-      <h3>The Code</h3>
+          <label>Please click the button to display a sentence.</label>
 
-      <pre class="bg-dark text-white p-5"><code>
-// Write a simple program to combine a first name and a last name inside a function.
-// Then update the function to accept a first and last name as arguments.
+          <button type="submit" onclick="displayFullName()">
+            Display your full name.
+          </button>
 
-function displayFullName(fName, lName) {
-  var fName = document.getElementById("fName").value;
-  var lName = document.getElementById("lName").value;
+          <p id="fullNameDisplay">&nbsp;</p>
 
-  return (document.getElementById(
-    "fullNameDisplay"
-  ).innerHTML = `${fName} ${lName}`);
-}
-      </code></pre>
+          <h2>Do I need a coat? - Part 1</h2>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code</h3>
 
-      <label for="fName">Please enter your first name.</label>
-      <input type="text" id="fName" />
-
-      <label for="lName">Please enter your last name.</label>
-      <input type="text" id="lName" />
-
-      <label>Please click the button to display a sentence.</label>
-      <button type="submit" onclick="displayFullName()">
-        Display your full name.
-      </button>
-
-      <p id="fullNameDisplay">&nbsp;</p>
-
-      <h2>Do I need a coat? - Part 1</h2>
-
-      <h3>The Code</h3>
-
-      <pre class="bg-dark text-white p-5"><code>
+          <pre class="bg-dark text-white p-5"><code>
 //Should I wear a coat?
 
 // Part 1
@@ -104,21 +187,21 @@ function coatCheck() {
 }
       </code></pre>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code in Action</h3>
 
-      <label for="temperature">Whats the temperature?</label>
-      <input type="text" id="temperature" />
+          <label for="temperature">Whats the temperature?</label>
+          <input type="text" id="temperature" />
 
-      <label>Please click the button to check if you need a coat.</label>
-      <button type="submit" onclick="coatCheck()">Do I need a coat?</button>
+          <label>Please click the button to check if you need a coat.</label>
+          <button type="submit" onclick="coatCheck()">Do I need a coat?</button>
 
-      <p id="coatAdvice">&nbsp;</p>
+          <p id="coatAdvice">&nbsp;</p>
 
-      <h2>Do I need a coat? - Part 2</h2>
+          <h2>Do I need a coat? - Part 2</h2>
 
-      <h3>The Code</h3>
+          <h3>The Code</h3>
 
-      <pre class="bg-dark text-white p-5"><code>
+          <pre class="bg-dark text-white p-5"><code>
 //Should I wear a coat?
 
 // Part 2
@@ -147,21 +230,23 @@ function coatCheck2() {
 }
       </code></pre>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code in Action</h3>
 
-      <label for="temperature2">Whats the temperature?</label>
-      <input type="text" id="temperature2" />
+          <label for="temperature2">Whats the temperature?</label>
+          <input type="text" id="temperature2" />
 
-      <label>Please click the button to check if you need a coat.</label>
-      <button type="submit" onclick="coatCheck2()">Do I need a coat?</button>
+          <label>Please click the button to check if you need a coat.</label>
+          <button type="submit" onclick="coatCheck2()">
+            Do I need a coat?
+          </button>
 
-      <p id="coatAdvice2">&nbsp;</p>
+          <p id="coatAdvice2">&nbsp;</p>
 
-      <h2>Age Calculator</h2>
+          <h2>Age Calculator</h2>
 
-      <h3>The Code</h3>
+          <h3>The Code</h3>
 
-      <pre class="bg-dark text-white p-5"><code>
+          <pre class="bg-dark text-white p-5"><code>
 // The Age Calculator
 
 // Forgot how old someone is? Calculate it!
@@ -181,21 +266,21 @@ function ageCalculator(currentyear, yearOfBirth) {
 }
         </code></pre>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code in Action</h3>
 
-      <label>Please enter your current Age</label>
+          <label>Please enter your current Age</label>
 
-      <input type="number" id="currentAge" />
-      <button type="submit" onclick="ageCalculator()">
-        Calculate your Age
-      </button>
-      <p id="year">&nbsp;</p>
+          <input type="number" id="currentAge" />
+          <button type="submit" onclick="ageCalculator()">
+            Calculate your Age
+          </button>
+          <p id="year">&nbsp;</p>
 
-      <h2>Fortune Teller</h2>
+          <h2>Fortune Teller</h2>
 
-      <h3>The Code</h3>
+          <h3>The Code</h3>
 
-      <pre class="bg-dark text-white p-5"><code>
+          <pre class="bg-dark text-white p-5"><code>
 // The Fortune Teller
 // Why pay a fortune teller when you can just program your fortune yourself?
 
@@ -221,30 +306,30 @@ function fortuneTeller(numberOfChildren, partnersName, location, jobTitle) {
 
       </code></pre>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code in Action</h3>
 
-      <label for="fortuneAge">Please enter your current Age</label>
-      <input type="number" id="fortuneAge" />
+          <label for="fortuneAge">Please enter your current Age</label>
+          <input type="number" id="fortuneAge" />
 
-      <label for="partnersName">Please enter your partners Name</label>
-      <input type="text" id="partnersName" />
+          <label for="partnersName">Please enter your partners Name</label>
+          <input type="text" id="partnersName" />
 
-      <label for="location">Please enter your current location</label>
-      <input type="text" id="location" />
+          <label for="location">Please enter your current location</label>
+          <input type="text" id="location" />
 
-      <label for="jobTitle">Please enter your job title</label>
-      <input type="text" id="jobTitle" />
-      <button type="submit" onclick="fortuneTeller()">
-        Let me tell your fortune
-      </button>
+          <label for="jobTitle">Please enter your job title</label>
+          <input type="text" id="jobTitle" />
+          <button type="submit" onclick="fortuneTeller()">
+            Let me tell your fortune
+          </button>
 
-      <p id="yourFortune">&nbsp;</p>
+          <p id="yourFortune">&nbsp;</p>
 
-      <h2>Percentage Calculator</h2>
+          <h2>Percentage Calculator</h2>
 
-      <h3>The Code</h3>
+          <h3>The Code</h3>
 
-      <pre class="bg-dark text-white p-5"><code>
+          <pre class="bg-dark text-white p-5"><code>
 //Percentage Calculator
 
 //Create a percentage calculator that takes a number and % and return the percentage value.
@@ -261,25 +346,25 @@ function percentageCalculator(num, per) {
 }
       </code></pre>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code in Action</h3>
 
-      <label for="percentageCalculatorNumber">Please enter a Number</label>
-      <input type="number" id="percentageCalculatorNumber" />
+          <label for="percentageCalculatorNumber">Please enter a Number</label>
+          <input type="number" id="percentageCalculatorNumber" />
 
-      <label for="percentageCalculatorPercent">Please enter a %</label>
-      <input type="number" id="percentageCalculatorPercent" />
+          <label for="percentageCalculatorPercent">Please enter a %</label>
+          <input type="number" id="percentageCalculatorPercent" />
 
-      <button type="submit" onclick="percentageCalculator()">
-        Work out the Percentage
-      </button>
+          <button type="submit" onclick="percentageCalculator()">
+            Work out the Percentage
+          </button>
 
-      <p id="percentageResult">&nbsp;</p>
+          <p id="percentageResult">&nbsp;</p>
 
-      <h2>Drinks Maker</h2>
+          <h2>Drinks Maker</h2>
 
-      <h3>The Code</h3>
+          <h3>The Code</h3>
 
-      <pre class="bg-dark text-white p-5"><code>
+          <pre class="bg-dark text-white p-5"><code>
 //Drinks Maker
 
 //Use a switch statement to make a drink selection with two variabkes and return the drinks selection.
@@ -320,29 +405,29 @@ function outputDrinksOrder(size, drink) {
 }
       </code></pre>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code in Action</h3>
 
-      <select name="flavour" id="flavours">
-        <option value="lemonade">Lemonade</option>
-        <option value="cola">Cola</option>
-        <option value="orange">Orangeade</option>
-      </select>
+          <select name="flavour" id="flavours">
+            <option value="lemonade">Lemonade</option>
+            <option value="cola">Cola</option>
+            <option value="orange">Orangeade</option>
+          </select>
 
-      <select name="size" id="sizes">
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
+          <select name="size" id="sizes">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
 
-      <button type="submit" onclick="drinkOrder()">Show my Order</button>
+          <button type="submit" onclick="drinkOrder()">Show my Order</button>
 
-      <p id="drinksOrder">&nbsp;</p>
+          <p id="drinksOrder">&nbsp;</p>
 
-      <h2>Calculator</h2>
+          <h2>Calculator</h2>
 
-      <h3>The Code</h3>
+          <h3>The Code</h3>
 
-      <pre class="bg-dark text-white p-5"><code>
+          <pre class="bg-dark text-white p-5"><code>
 //Calculator
 
 //Build a simple calculator that takes two integers and the operator and displays the result.
@@ -389,32 +474,36 @@ function calculator(num1, num2, operator) {
 }
       </code></pre>
 
-      <h3>The Code in Action</h3>
+          <h3>The Code in Action</h3>
 
-      <label for="num1">Please enter a Number</label>
-      <input type="number" id="num1" />
+          <label for="num1">Please enter a Number</label>
+          <input type="number" id="num1" />
 
-      <select name="operator" id="operator">
-        <option value="+">+ Add</option>
-        <option value="-">- Subtract</option>
-        <option value="*">* Times</option>
-        <option value="/">/ Divide</option>
-        <option value="%">% Modulas</option>
-      </select>
+          <select name="operator" id="operator">
+            <option value="+">+ Add</option>
+            <option value="-">- Subtract</option>
+            <option value="*">* Times</option>
+            <option value="/">/ Divide</option>
+            <option value="%">% Modulas</option>
+          </select>
 
-      <label for="num2">Please enter a Number</label>
-      <input type="number" id="num2" />
+          <label for="num2">Please enter a Number</label>
+          <input type="number" id="num2" />
 
-      <button type="submit" onclick="calculator()">Calculate</button>
+          <button type="submit" onclick="calculator()">Calculate</button>
 
-      <p id="calculatorResult">&nbsp;</p>
-      <!-- Scripts -->
-      <script src="scripts/scripts.js"></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"
-      ></script>
+          <p id="calculatorResult">&nbsp;</p>
+
+          <a href="#top">Back to the top</a>
+        </div>
+      </main>
     </div>
+    <!-- Scripts -->
+    <script src="/scripts/scripts.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
