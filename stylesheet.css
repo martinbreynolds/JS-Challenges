@@ -32,7 +32,11 @@ main pre {
   margin-top: 2rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #054972 !important;
+  width: 80%;
+}
+
+main pre code {
+  display: block;
 }
 
 main .challenge {
@@ -60,6 +64,15 @@ main .answerHolder {
   padding: 1rem;
 }
 
+main .inputArea {
+  display: flex;
+  flex-direction: column;
+}
+
+main .inputArea label {
+  margin-top: 1rem;
+}
+
 main .buttonHolder button {
   width: auto;
   background-color: #054972;
@@ -78,7 +91,7 @@ main {
 main h2 {
   font-size: 2rem;
   font-weight: 800;
-  padding-top: 3rem;
+  padding-top: 4.5rem;
   color: #054972 !important;
 }
 
