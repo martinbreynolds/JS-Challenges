@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/stylesheet.css" />
-    <title>Variables and Operators</title>
+    <title>Javascript Challenges</title>
   </head>
 
   <!-- Start of Body Content -->
@@ -20,9 +20,9 @@
     <div class="row">
       <sidebar class="col-12 col-md-3 col-xl-2 bg-light">
         <nav class="p-3">
-          <h3>Variables and Operators</h3>
           <h4>Tasks</h4>
           <ul>
+            <li><a href="#sentenceChallenge">Tip Calculator</a></li>
             <li><a href="#sentenceChallenge">Sentence Output</a></li>
             <li><a href="#fullNameChallenge">Show Your Full Name</a></li>
             <li><a href="#needACoat1">Do I Need a Coat? Task 1</a></li>
@@ -52,6 +52,67 @@
         <div class="container">
           <a id="#top"></a>
           <br />
+          <!-- Tip Calculator Challenge -->
+          <div class="challenge">
+            <h2 id="tipCalculator">Tip Calculator Challenge</h2>
+            <p>We’ll make a program to calculate a tip:</p>
+            <p>Create 2 Variables for Amount and Tip Percentage</p>
+            <p>Calculate the new total</p>
+            <p>
+              Output a sentence to the page - something like: "Your total bill,
+              with tip, is £35.45"
+            </p>
+            <p>BONUS POINTS:</p>
+            <p>Use `toFixed()` to round the output to 2 decimal places</p>
+            <p>Display the tip amount in the output as well</p>
+            <p>Additional</p>
+            <p>Make a Procedural `Function` in Javascript.</p>
+            <h3>The Code</h3>
+            <pre class="bg-dark text-white">
+              <code>
+  function tipCalculator() {
+  var billAmount = parseInt(document.getElementById("billAmount").value);
+
+  var tipPercentage = parseInt(
+    document.getElementById("percentAmount").value
+  ).toFixed(2);
+
+  var tipPercentCalc = ((billAmount / 100) * tipPercentage).toFixed(2);
+
+  var totalBill = billAmount + tipPercentCalc;
+
+  return (document.getElementById(
+    "totalBillSentence"
+  ).innerHTML = `Your bill of £${billAmount.toFixed(
+    2
+  )}, with a ${tipPercentage}% tip of £${tipPercentCalc} , is a total bill of £${totalBill}`);
+}
+                    </code>
+                  </pre>
+            <h3>The Code in Action</h3>
+          <div class="codeInAction">
+            <div class="inputArea">
+              <label for="billAmount">Please enter the bill amount.</label>
+              <input type="number" id="billAmount" />
+
+              <label for="percentAmount">Please enter the tip percentage amount.</label>
+              <input type="number" id="percentAmount" />
+            </div>
+            <div class="buttonHolder">
+              <label>Please click the button to calculate your tip.</label>
+
+              <button
+                class="btn btn-primary"
+                type="submit"
+                onclick="tipCalculator()"
+              >
+                Calculate your Tip
+              </button>
+            </div>
+            <div class="answerHolder">
+              <p id="totalBillSentence">&nbsp;</p>
+            </div>
+          </div>
           <!-- Sentence Challenge -->
           <div class="challenge">
             <h2 id="sentenceChallenge">Sentence Output</h2>
@@ -75,7 +136,6 @@ function displayFullName(fName, lName) {
 }
       </code>
     </pre>
-
             <h3>The Code in Action</h3>
             <div class="codeInAction">
               <div class="buttonHolder">
@@ -579,7 +639,15 @@ function calculator(num1, num2, operator) {
     </div>
 
     <!-- Scripts -->
-    <script src="/scripts/scripts.js"></script>
+    <script src="/scripts/drinksMaker.js"></script>
+    <script src="/scripts/tipCalculator.js"></script>
+    <script src="/scripts/sentenceOutput.js"></script>
+    <script src="/scripts/fullName.js"></script>
+    <script src="/scripts/ageCalculator.js"></script>
+    <script src="/scripts/wearACoat.js"></script>
+    <script src="/scripts/fortuneTeller.js"></script>
+    <script src="/scripts/percentageCalculator.js"></script>
+    <script src="/scripts/calculationFunction.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
