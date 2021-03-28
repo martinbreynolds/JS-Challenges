@@ -88,10 +88,18 @@ main {
   z-index: 0;
 }
 
+main h1 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #054972 !important;
+}
+
 main h2 {
   font-size: 2rem;
   font-weight: 800;
-  padding-top: 4.5rem;
+  padding-top: 2.5rem;
   color: #054972 !important;
 }
 
